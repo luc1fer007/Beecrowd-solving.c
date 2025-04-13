@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+int main()
+{
+    int i,j,arr[3],original[3],temp;
+    for (i = 0 ; i < 3 ; i ++)
+    {
+        scanf("%d",&arr[i]);
+        original[i] = arr[i];
+    }
+    for ( i = 0 ; i < 3 - 1 ; i++) // in Bubble sort n - 1 needed to fully sort
+    {
+        for ( j =  0 ; j < 3-1 ; j++) // it cannot be j < i !!!
+        {
+            if (arr[j] > arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+
+            }
+        }
+
+    }
+    for ( i = 0 ; i < 3 ; i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+
+    printf("\n");
+
+    for ( i = 0 ; i < 3 ; i++)
+    {
+        printf("%d\n",original[i]);
+    }
+
+    return 0;
+}
