@@ -10,7 +10,7 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    // for(int i = 1; i <= N ; i++)         /*its for check whether we are input N times or not */
+    // for(int i = 1; i <= N ; i++)         /*its for checking whether we are input N times or not */
     // { 
     //     printf("%d\n",arr[i]);
     // }
