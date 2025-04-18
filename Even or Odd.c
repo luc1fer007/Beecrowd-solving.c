@@ -5,31 +5,26 @@ int main()
 {
     int N,X;
     scanf("%d",&N);
-    for(int i = 0; i <= N ; i++)
+    int arr[N];
+    for(int i = 1; i <= N ; i++)
     {
-        scanf("%d",&X);
-        if(X % 2 ==0  && X > 0)
-        {
-            printf("EVEN POSITIVE\n");
-
-        }
-        else
-        {
-            printf("ODD NEGATIVE\n");
-        }
-        if( X % 2 == 0 && X < 0)
-        {
-            printf("EVEN NEGATIVE\n");
-        }
-        else
-        {
-            printf("ODD POSITIVE\n");
-        }
-        if( X == 0)
-        {
-            printf("NULL\n");
-        }
-    
+        scanf("%d",&arr[i]);
     }
+    // for(int i = 1; i <= N ; i++)         /*its for check whether we are input N times or not */
+    // { 
+    //     printf("%d\n",arr[i]);
+    // }
+    for(int i = 1 ; i <= N ; i++)
+    {
+        if(arr[i] == 0 ) printf("NULL\n");
+        if(arr[i] % 2 == 0 && arr[i] > 0) printf("EVEN POSITIVE\n");
+        if(arr[i] % 2 != 0 && arr[i] < 0) printf("ODD NEGATIVE\n");
+        if(arr[i] % 2 == 0 && arr[i] < 0) printf("EVEN NEGATIVE\n");
+        if(arr[i] % 2 != 0 && arr[i] > 0) printf("ODD POSITIVE\n");
+        
+    }
+    
+    
+    
     return 0;
 }
