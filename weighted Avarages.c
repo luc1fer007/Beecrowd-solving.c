@@ -7,7 +7,7 @@
 int main()
 {
     float avg;
-    float sum = 0;
+    
     int i,j, N;
     scanf("%d",&N);
     float arr[N][3]; 
