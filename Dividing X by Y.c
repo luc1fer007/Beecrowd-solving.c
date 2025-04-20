@@ -1,41 +1,25 @@
-#include<stdio.h>
+ #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 int main()
 {
     int X , Y;
-    for(int i = 0 ; i <= 100000 ; i++)
+    int N;
+    scanf("%d",&N);
+    for(int i = 1; i <= N ; i++)
     {
-        if(X == 0 && Y == 0)
+        scanf("%d %d",&X,&Y);
+        if((X == 0 && Y==0) || (X >= 0 && Y==0) || (X <= 0 && Y == 0))  //(0,0) or (0/1 , 0) or (0/-1,0)
         {
-            break;
+            printf("divisao impossivel\n");
         }
-        else
-        {
-            scanf("%d %d",&X ,&Y);
-           
-            if(X == 0 && Y <= 0 || X == 0 && Y >= 0)
-            {
-                printf("divisao impossivel\n");
-            }
-            if(X > 0 && Y > 0) printf("%.1f\n",(float)X / (float)Y);
-            if(X < 0 && Y > 0) printf("%.1f\n",(float)X / (float)Y);
-            if(X > 0 && Y < 0) printf("%.1f\n",(float)X / (float)Y);
+        if(X > 0 && Y > 0 ) printf("%.1f\n",(float)X / Y); //(1,1)
+        if(X < 0 && Y < 0 ) printf("%.1f\n",(float)X / Y); //(-1,-1)
+        if(X > 0 && Y < 0 ) printf("%.1f\n",(float)X / Y); //(1,-1)
+        if(X < 0 && Y > 0 ) printf("%.1f\n",(float)X / Y); //(-1,1)
+        if(X == 0 && Y > 0 )printf("%.1f\n",(float)X / Y); //(0,1)
+        if(X == 0 && Y < 0 )printf("%.1f\n",(float)X / Y); //(0,-1)
 
-
-            
-            // if(X > 0 && Y > 0)
-            // {
-            //     printf("%f",(float)X / Y);
-            // }
-            // if(X < 0 && Y == 0) 
-            // {
-            //     printf("%.1f",(float)X / Y);
-            // }
-               
-          
-
-        }
     }
     return 0;
 } 
