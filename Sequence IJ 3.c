@@ -13,3 +13,20 @@ int main()
     }
     return 0 ;
 }
+
+
+//Another way to do that
+#include<stdio.h>
+int main()
+{
+    int i,J=7,j;                  //New J is to control j and to increase its value
+    for(i = 1 ; i <= 9 ; i+=2)
+    {
+        for(j = J ; j >= J-2 ; j--)
+        {
+            printf("I=%d J=%d\n",i,j);
+        }J += 2;  //first J is 7 after that J is now 9 ;
+       
+    } 
+
+}
